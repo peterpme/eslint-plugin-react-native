@@ -122,6 +122,12 @@ const tests = {
         }
       `,
     },
+    {
+      // Testing nested components inside an allowed component
+      code: `
+        <Text>Some text <>More text</></Text>
+      `,
+    },
   ],
   invalid: [
     {
@@ -191,6 +197,16 @@ const tests = {
       options: [{ skip: ['Component.Text'] }],
       errors: [{
         message: 'Raw text (some text) cannot be used outside of a <Text> tag',
+      }],
+    },
+    {
+      // Tests fix to https://github.com/Intellicode/eslint-plugin-react-native/issues/270
+      // from https://github.com/Intellicode/eslint-plugin-react-native/issues/270#issuecomment-897766305
+      code: `
+        return <MyComponent myFunctionProp={() => {}}>my children</MyComponent>;
+      `,
+      errors: [{
+        message: 'Raw text (my children) cannot be used outside of a <Text> tag',
       }],
     },
   ],
