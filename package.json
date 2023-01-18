@@ -1,6 +1,6 @@
 {
   "name": "@peterpme/eslint-plugin-react-native",
-  "version": "4.0.0",
+  "version": "4.1.0",
   "author": "Tom Hastjarjanto <tom@intellicode.nl>",
   "description": "React Native specific linting rules for ESLint",
   "main": "index.js",
@@ -18,10 +18,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/intellicode/eslint-plugin-react-native"
+    "url": "https://github.com/peterpme/eslint-plugin-react-native"
   },
-  "homepage": "https://github.com/intellicode/eslint-plugin-react-native",
-  "bugs": "https://github.com/intellicode/eslint-plugin-react-native/issues",
+  "homepage": "https://github.com/peterpme/eslint-plugin-react-native",
+  "bugs": "https://github.com/peterpme/eslint-plugin-react-native/issues",
   "devDependencies": {
     "@babel/eslint-parser": "^7.16.3",
     "@typescript-eslint/parser": "^5.3.1",

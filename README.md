@@ -1,16 +1,10 @@
-
-ESLint plugin for React Native
-==============================
-
-# Project update
-
-Dear users, first of all, thanks for using the plugin! At the moment development activity is low, I've personally not worked with React Native for many years and have little time to continue updating the plugin. I'll do my best to update the plugin to ensure compatibility with new eslint versions, but unfortunately I do not have time to asses new features/pull requests. Thanks for your understanding!
+# ESLint plugin for React Native
 
 [![Greenkeeper badge](https://badges.greenkeeper.io/Intellicode/eslint-plugin-react-native.svg)](https://greenkeeper.io/)
 
 [![Maintenance Status][status-image]][status-url] [![NPM version][npm-image]][npm-url] [![Coverage Status][coverage-image]][coverage-url] [![Code Climate][climate-image]][climate-url] [![BCH compliance][bettercode-image]][bettercode-url]
 
-React Native specific linting rules for ESLint. This repository is structured like  (and contains code from) the excellent [eslint-plugin-react](http://github.com/yannickcr/eslint-plugin-react).
+React Native specific linting rules for ESLint. This repository is structured like (and contains code from) the excellent [eslint-plugin-react](http://github.com/yannickcr/eslint-plugin-react).
 
 # Installation
 
@@ -28,9 +22,8 @@ $ npm install --save-dev eslint-plugin-react
 
 Similarly, install eslint-plugin-react-native
 
-
 ```sh
-$ npm install --save-dev eslint-plugin-react-native
+$ npm install --save-dev @peterpme/eslint-plugin-react-native
 ```
 
 # Configuration
@@ -39,10 +32,7 @@ Add `plugins` section and specify ESLint-plugin-React (optional) and ESLint-plug
 
 ```json
 {
-  "plugins": [
-    "react",
-    "react-native"
-  ]
+  "plugins": ["react", "react-native"]
 }
 ```
 
@@ -51,14 +41,14 @@ If it is not already the case you must also configure `ESLint` to support JSX.
 ```json
 {
   "parserOptions": {
-      "ecmaFeatures": {
-          "jsx": true
-      }
+    "ecmaFeatures": {
+      "jsx": true
+    }
   }
 }
 ```
 
-In order to whitelist all *browser-like* globals, add `react-native/react-native` to your config.
+In order to whitelist all _browser-like_ globals, add `react-native/react-native` to your config.
 
 ```json
 {
@@ -86,35 +76,32 @@ Finally, enable all of the rules that you would like to use.
     "react-native/no-inline-styles": 2,
     "react-native/no-color-literals": 2,
     "react-native/no-raw-text": 2,
-    "react-native/no-single-element-style-arrays": 2,
+    "react-native/no-single-element-style-arrays": 2
   }
 }
 ```
 
 # List of supported rules
 
-* [no-unused-styles](docs/rules/no-unused-styles.md): Detect `StyleSheet` rules which are not used in your React components
-* [sort-styles](docs/rules/sort-styles.md): Require style definitions to be sorted alphabetically
-* [split-platform-components](docs/rules/split-platform-components.md): Enforce using platform specific filenames when necessary
-* [no-inline-styles](docs/rules/no-inline-styles.md): Detect JSX components with inline styles that contain literal values
-* [no-color-literals](docs/rules/no-color-literals.md): Detect `StyleSheet` rules and inline styles containing color literals instead of variables
-* [no-raw-text](docs/rules/no-raw-text.md): Detect raw text outside of `Text`  component
-* [no-single-element-style-arrays](docs/rules/no-single-element-style-arrays.md): No style arrays that have 1 element only `<View style={[{height: 10}]}/>`
+- [no-unused-styles](docs/rules/no-unused-styles.md): Detect `StyleSheet` rules which are not used in your React components
+- [sort-styles](docs/rules/sort-styles.md): Require style definitions to be sorted alphabetically
+- [split-platform-components](docs/rules/split-platform-components.md): Enforce using platform specific filenames when necessary
+- [no-inline-styles](docs/rules/no-inline-styles.md): Detect JSX components with inline styles that contain literal values
+- [no-color-literals](docs/rules/no-color-literals.md): Detect `StyleSheet` rules and inline styles containing color literals instead of variables
+- [no-raw-text](docs/rules/no-raw-text.md): Detect raw text outside of `Text` component
+- [no-single-element-style-arrays](docs/rules/no-single-element-style-arrays.md): No style arrays that have 1 element only `<View style={[{height: 10}]}/>`
 
 [npm-url]: https://npmjs.org/package/eslint-plugin-react-native
 [npm-image]: http://img.shields.io/npm/v/eslint-plugin-react-native.svg?style=flat-square
-
 [coverage-url]: https://coveralls.io/r/Intellicode/eslint-plugin-react-native?branch=master
 [coverage-image]: http://img.shields.io/coveralls/Intellicode/eslint-plugin-react-native/master.svg?style=flat-square
-
 [climate-url]: https://codeclimate.com/github/Intellicode/eslint-plugin-react-native
 [climate-image]: http://img.shields.io/codeclimate/github/Intellicode/eslint-plugin-react-native.svg?style=flat-square
-
 [status-url]: https://github.com/Intellicode/eslint-plugin-react-native/pulse
 [status-image]: http://img.shields.io/badge/status-maintained-brightgreen.svg?style=flat-square
-
 [bettercode-image]: https://bettercodehub.com/edge/badge/Intellicode/eslint-plugin-react-native
 [bettercode-url]: https://bettercodehub.com
+
 # Shareable configurations
 
 ## All
@@ -132,3 +119,7 @@ This plugin also exports an `all` configuration that includes every available ru
 ```
 
 **Note**: These configurations will import `eslint-plugin-react-native` and enable JSX in [parser options](http://eslint.org/docs/user-guide/configuring#specifying-parser-options).
+
+## Thanks
+
+Thanks to [@intellicode](https://github.com/Intellicode/eslint-plugin-react-native) for creating and maintaining this after all these years
