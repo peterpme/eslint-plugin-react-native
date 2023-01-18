@@ -20,7 +20,7 @@ To make most use of this plugin, its recommended to install [eslint-plugin-react
 $ npm install --save-dev eslint-plugin-react
 ```
 
-Similarly, install eslint-plugin-react-native
+Similarly, install @peterpme/eslint-plugin-react-native
 
 ```sh
 $ npm install --save-dev @peterpme/eslint-plugin-react-native
@@ -28,11 +28,11 @@ $ npm install --save-dev @peterpme/eslint-plugin-react-native
 
 # Configuration
 
-Add `plugins` section and specify ESLint-plugin-React (optional) and ESLint-plugin-react-native as a plugin.
+Add `plugins` section and specify ESLint-plugin-React (optional) and @peterpme/eslint-plugin-react-native as a plugin.
 
 ```json
 {
-  "plugins": ["react", "react-native"]
+  "plugins": ["react", "@peterpme/react-native"]
 }
 ```
 
@@ -48,12 +48,12 @@ If it is not already the case you must also configure `ESLint` to support JSX.
 }
 ```
 
-In order to whitelist all _browser-like_ globals, add `react-native/react-native` to your config.
+In order to whitelist all _browser-like_ globals, add `@peterpme/react-native/react-native` to your config.
 
 ```json
 {
   "env": {
-    "react-native/react-native": true
+    "@peterpme/react-native/react-native": true
   }
 }
 ```
@@ -62,7 +62,7 @@ To use another stylesheet providers.
 
 ```json
 settings: {
-    'react-native/style-sheet-object-names': ['EStyleSheet', 'OtherStyleSheet', 'PStyleSheet']
+    '@peterpme/react-native/style-sheet-object-names': ['EStyleSheet', 'OtherStyleSheet', 'PStyleSheet']
 }
 ```
 
@@ -71,12 +71,12 @@ Finally, enable all of the rules that you would like to use.
 ```json
 {
   "rules": {
-    "react-native/no-unused-styles": 2,
-    "react-native/split-platform-components": 2,
-    "react-native/no-inline-styles": 2,
-    "react-native/no-color-literals": 2,
-    "react-native/no-raw-text": 2,
-    "react-native/no-single-element-style-arrays": 2
+    "@peterpme/react-native/no-unused-styles": 2,
+    "@peterpme/react-native/split-platform-components": 2,
+    "@peterpme/react-native/no-inline-styles": 2,
+    "@peterpme/react-native/no-color-literals": 2,
+    "@peterpme/react-native/no-raw-text": 2,
+    "@peterpme/react-native/no-single-element-style-arrays": 2
   }
 }
 ```
@@ -112,13 +112,13 @@ This plugin also exports an `all` configuration that includes every available ru
 {
   "plugins": [
     /* ... */
-    "react-native"
+    "@peterpme/react-native"
   ],
-  "extends": [/* ... */, "plugin:react-native/all"]
+  "extends": [/* ... */, "plugin:@peterpme/react-native/all"]
 }
 ```
 
-**Note**: These configurations will import `eslint-plugin-react-native` and enable JSX in [parser options](http://eslint.org/docs/user-guide/configuring#specifying-parser-options).
+**Note**: These configurations will import `@peterpme/eslint-plugin-react-native` and enable JSX in [parser options](http://eslint.org/docs/user-guide/configuring#specifying-parser-options).
 
 ## Thanks
 
