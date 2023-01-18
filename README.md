@@ -58,11 +58,13 @@ In order to whitelist all _browser-like_ globals, add `@peterpme/react-native/re
 }
 ```
 
-To use another stylesheet providers.
+To use a different stylesheet provider:
 
 ```json
-settings: {
-    '@peterpme/react-native/style-sheet-object-names': ['EStyleSheet', 'OtherStyleSheet', 'PStyleSheet']
+{
+  "settings": {
+    "@peterpme/react-native/style-sheet-object-names": ["EStyleSheet", "OtherStyleSheet", "PStyleSheet"]
+  }
 }
 ```
 
