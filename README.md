@@ -1,4 +1,4 @@
-# ESLint plugin for React Native
+# @peterpme/eslint-plugin-react-native
 
 [![Greenkeeper badge](https://badges.greenkeeper.io/Intellicode/eslint-plugin-react-native.svg)](https://greenkeeper.io/)
 
